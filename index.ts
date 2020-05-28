@@ -26,7 +26,7 @@ export default function (box: Box): ApolloServerPlugin {
           logger.info({
             message: "Parsing did start.",
             event: "parsing_did_start",
-            at: startedAt,
+            timestamp: startedAt,
             context: requestContext,
           });
 
@@ -38,7 +38,7 @@ export default function (box: Box): ApolloServerPlugin {
               logger.error({
                 message: "Parsing failed.",
                 event: "parsing_failed",
-                at: finishedAt,
+                timestamp: finishedAt,
                 duration,
                 errors,
                 context: requestContext,
@@ -47,7 +47,7 @@ export default function (box: Box): ApolloServerPlugin {
               logger.info({
                 message: "Parsing finished.",
                 event: "parsing_finished",
-                at: finishedAt,
+                timestamp: finishedAt,
                 duration,
                 errors,
                 context: requestContext,
@@ -62,7 +62,7 @@ export default function (box: Box): ApolloServerPlugin {
           logger.info({
             message: "Validation did start.",
             event: "validation_did_start",
-            at: startedAt,
+            timestamp: startedAt,
             context: requestContext,
           });
 
@@ -74,7 +74,7 @@ export default function (box: Box): ApolloServerPlugin {
               logger.error({
                 message: "Validation failed.",
                 event: "validation_failed",
-                at: finishedAt,
+                timestamp: finishedAt,
                 duration,
                 errors,
                 context: requestContext,
@@ -89,7 +89,7 @@ export default function (box: Box): ApolloServerPlugin {
           logger.info({
             message: "Execution did start.",
             event: "execution_did_start",
-            at: startedAt,
+            timestamp: startedAt,
             context: requestContext,
           });
 
@@ -101,7 +101,7 @@ export default function (box: Box): ApolloServerPlugin {
               logger.error({
                 message: "Execution failed.",
                 event: "execution_failed",
-                at: finishedAt,
+                timestamp: finishedAt,
                 duration,
                 errors,
                 context: requestContext,

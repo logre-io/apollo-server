@@ -2,7 +2,7 @@
   "name": "logreio-apollo-server",
   "repository": "logre-io/apollo-server",
   "homepage": "https://github.com/logre-io/apollo-server",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Apollo Server Plugin for Logre.IO",
   "main": "./dist/index.js",
   "module": "./esm/index.js",
